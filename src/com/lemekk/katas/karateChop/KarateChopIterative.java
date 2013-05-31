@@ -1,8 +1,6 @@
 package com.lemekk.katas.karateChop;
 
-public class KarateChopIterative implements KarateChop {
-
-	private static final int VALUE_NOT_FOUND = -1;
+public class KarateChopIterative extends KarateChop {
 
 	@Override
 	public int chop(int value, int[] sortedArray) {
@@ -35,14 +33,6 @@ public class KarateChopIterative implements KarateChop {
 		}
 
 		return result;
-	}
-
-	private int getChoppedIndex(int from, int to) {
-		return ((to - from) / 2) + from;
-	}
-
-	private boolean isArrayEmpty(int[] sortedArray) {
-		return sortedArray == null || sortedArray.length == 0;
 	}
 
 }

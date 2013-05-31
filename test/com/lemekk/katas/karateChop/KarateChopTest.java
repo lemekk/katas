@@ -3,11 +3,19 @@ package com.lemekk.katas.karateChop;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public abstract class KarateChopTest {
 
-	protected KarateChop karateChop;
+	private KarateChop karateChop;
+
+	@Before
+	public void setUp() {
+		karateChop = getTestObject();
+	}
+
+	protected abstract KarateChop getTestObject();
 
 	@Test
 	public void testChopEmptyArray() {
@@ -65,7 +73,7 @@ public abstract class KarateChopTest {
 		if (elements == null) {
 			return new int[0];
 		}
-	
+
 		return elements;
 	}
 
