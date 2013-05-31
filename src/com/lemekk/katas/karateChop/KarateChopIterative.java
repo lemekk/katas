@@ -4,9 +4,6 @@ public class KarateChopIterative implements KarateChop {
 
 	private static final int VALUE_NOT_FOUND = -1;
 
-	/* (non-Javadoc)
-	 * @see com.lemekk.katas.karateChop.KarateChop#chop(int, int[])
-	 */
 	@Override
 	public int chop(int value, int[] sortedArray) {
 		if (isArrayEmpty(sortedArray)) {
