@@ -37,7 +37,7 @@ public class KarateChopIterative {
 	}
 
 	private int getChoppedIndex(int from, int to) {
-		return (to - from) / 2;
+		return ((to - from) / 2) + from;
 	}
 
 	private boolean isArrayEmpty(int[] sortedArray) {
